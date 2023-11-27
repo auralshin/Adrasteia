@@ -4,10 +4,11 @@
   "private": true,
   "workspaces": {
     "packages": [
-      "packages/adrasteia",
+      "packages/hardhat",
       "packages/nextjs",
-      "packages/snap",
-      "packages/payment-link"
+      "packages/web",
+      "packages/server",
+      "packages/snap"
     ]
   },
   "scripts": {
@@ -29,7 +30,9 @@
     "postinstall": "husky install",
     "precommit": "lint-staged",
     "vercel": "yarn workspace @se-2/nextjs vercel",
-    "vercel:yolo": "yarn workspace @se-2/nextjs vercel:yolo"
+    "vercel:yolo": "yarn workspace @se-2/nextjs vercel:yolo",
+    "web-start": "yarn workspace @se-2/web dev",
+    "server-start": "yarn workspace @se-2/server start:dev"
   },
   "packageManager": "yarn@3.2.3",
   "devDependencies": {
