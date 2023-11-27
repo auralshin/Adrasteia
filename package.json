@@ -6,7 +6,9 @@
     "packages": [
       "packages/hardhat",
       "packages/nextjs",
-      "packages/web"
+      "packages/web",
+      "packages/server",
+      "packages/snap"
     ]
   },
   "scripts": {
@@ -29,7 +31,8 @@
     "precommit": "lint-staged",
     "vercel": "yarn workspace @se-2/nextjs vercel",
     "vercel:yolo": "yarn workspace @se-2/nextjs vercel:yolo",
-    "web-start": "yarn workspace @se-2/web dev"
+    "web-start": "yarn workspace @se-2/web dev",
+    "server-start": "yarn workspace @se-2/server start:dev"
   },
   "packageManager": "yarn@3.2.3",
   "devDependencies": {
