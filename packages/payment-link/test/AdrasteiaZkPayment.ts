@@ -102,7 +102,7 @@ describe("AdrasteiaZkPayment", () => {
     });
   });
 
-  describe("sendPayment", () => {
+  describe("claimPayment", () => {
     let zkProof: string[];
     beforeEach(async () => {
       const passcode = await passcodeHash(
@@ -131,7 +131,7 @@ describe("AdrasteiaZkPayment", () => {
       console.log("zkProof", zkProof.length);
 
       await expect(
-        adrasteiaZkPayment.connect(accounts[1]).sendPayment(1, zkProof)
+        adrasteiaZkPayment.connect(accounts[1]).claimPayment(1, zkProof)
       )
         .to.emit(adrasteiaZkPayment, "PaymentSent")
         .withArgs(1);

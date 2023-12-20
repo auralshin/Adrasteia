@@ -83,7 +83,7 @@ contract AdrasteiaZkPayment is
      * @param paymentId The ID of the payment to send.
      * @param proof zk-SNARK proof to be verified.
      */
-    function sendPayment(
+    function claimPayment(
         uint256 paymentId,
         uint256[] memory proof
     ) external nonReentrant whenNotPaused {
