@@ -11,6 +11,7 @@ import "./Verifier.sol";
  * @title Adrasteia Zero-Knowledge Payment Contract
  * @dev This contract enables payments with optional privacy through zk-SNARK proofs,
  *      supporting both ETH and ERC20 tokens.
+ * @dev @auralshin need to implememt cross chain create and claim with one network issuing the proof and the other verifying it
  */
 contract AdrasteiaZkPayment is
     Ownable,
